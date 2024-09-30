@@ -1,0 +1,232 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #8B8B8B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+}
+
+main {
+    width: 550px ;
+    min-height: 550px;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 5px 2px black;
+    }
+
+.start-page {
+    width: 550px ;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;   
+}
+.start-page > h1 {
+    background-color: #00000080;
+    color: #0def17;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 5px #0def17;
+    margin-bottom: 0px;
+}
+
+.start-page > button {
+    background-color: #0def18c4;   
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px 5px black;
+    text-shadow: 1px 1px 1px #49494b;
+    color: black;
+    cursor: pointer;
+}
+
+ /* Hide the radio button */
+ input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+ /* Style the label */
+ .radio-label {
+    display: inline-block;
+    padding: 4px 8px;
+    font-family: "Poppins", sans-serif;   
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px solid #8B8B8B;    
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 13px;
+    background-color: black;
+    color: #8B8B8B;
+    letter-spacing: 1px;    
+}
+
+ /* Style the selected label */
+ input[type="radio"]:checked + .radio-label {
+    background-color: #8B8B8B;
+    color: black;
+    border: none;
+}
+
+input[type="radio"] +.radio-label.right{
+    background-color: #0def188e;
+    color: black;
+    border: none;
+}
+
+input[type="radio"] +.radio-label.wrong{
+    background-color: #d50404c3;
+    border: none;
+    color: #a7a6a6;
+    text-shadow: 1px 1px 0px black;
+}
+
+.question {
+    color: #8B8B8B;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+    margin: 15px 75px;
+}
+
+.line {
+    color: #8B8B8B;
+    margin: 0px 75px 0px 75px;
+}
+
+.answers {
+    margin: 0px 75px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 13px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkAnswers {
+    background-color: #8B8B8B;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    margin: 13px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 12px;
+    text-align: center;
+    padding: 8px 16px; 
+    border-radius: 7px;
+    color: black;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper > p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #8B8B8B;
+}
+
+.select-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+:root {
+    --select-border: black;
+    --select-focus: black;
+    --select-arrow: var(--select-border);
+  }
+
+select {
+    /* A reset of styles, including removing the default dropdown arrow */
+    appearance: none;
+    /* Additional resets for further consistency */
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+  }
+
+  option {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    background-color: #8B8B8B;
+    border: none;
+    border-radius: 0.5em;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  .select {
+    width: 45%;
+    min-width: 15ch;
+    max-width: 20ch;
+    border: 2px solid var(--select-border);
+    border-radius: 0.5em;
+    padding: 0.25em 0.5em;
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #8B8B8B;
+    background-image: linear-gradient(to top, #0def18c4, #8B8B8B 50%);
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+  }
+
+  .select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: black;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+
+select,
+.select:after {
+  grid-area: select;
+}
+
+.select:after {
+    justify-self: end;
+  }
