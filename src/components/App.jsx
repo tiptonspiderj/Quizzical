@@ -28,8 +28,7 @@ export default function App() {
                     apidata.results.map( (question, index) => {
                         // "he" is used to decode html entities to their symbols rather than weird characters
                         questions[index].push(he.decode(question.question))                  
-                        questio
-                        n.incorrect_answers.forEach( (element) => 
+                        question.incorrect_answers.forEach( (element) => 
                             answersWithQuestions[index].push( {"wrong": he.decode(element) } ) 
                         )
                         answersWithQuestions[index].push( { "right": he.decode(question.correct_answer) } )                
@@ -66,7 +65,6 @@ export default function App() {
     }   
 
     function formatData(data){
-        console.log("data set")
         let tempArray = [[],[],[],[],[]]
         data.forEach((element, index)=> {
             let correctNumber = ""
