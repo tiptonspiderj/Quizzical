@@ -19,33 +19,37 @@ export default function App() {
     let answersWithQuestions = [[], [], [], [], []] 
     const URL = `https://opentdb.com/api.php?amount=5&category=${category}&difficulty=${level}&type=multiple` 
 
-        React.useEffect(()=>{        
-            fetch(URL)
-            .then(res=>res.json() )
-            .then(apidata => {               
-                //extract the questions and answers from the API request         
-                apidata.results.map( (question, index) => {
-                    // "he" is used to decode html entities to their symbols rather than weird characters
-                    questions[index].push(he.decode(question.question))                  
-                    question.incorrect_answers.forEach( (element) => 
-                        answersWithQuestions[index].push( {"wrong": he.decode(element) } ) 
-                    )
-                    answersWithQuestions[index].push( { "right": he.decode(question.correct_answer) } )                
+        React.useEffect(()=>{ 
+            if (startQuiz){
+                fetch(URL)
+                .then(res=>res.json() )
+                .then(apidata => {               
+                    //extract the questions and answers from the API request         
+                    apidata.results.map( (question, index) => {
+                        // "he" is used to decode html entities to their symbols rather than weird characters
+                        questions[index].push(he.decode(question.question))                  
+                        questio
+                        n.incorrect_answers.forEach( (element) => 
+                            answersWithQuestions[index].push( {"wrong": he.decode(element) } ) 
+                        )
+                        answersWithQuestions[index].push( { "right": he.decode(question.correct_answer) } )                
+                    } )
+                    // randomly shuffle the answers for each question                
+                    answersWithQuestions.forEach( answer => shuffleAnswers(answer) )
+                    // add the questions to make a combined array of questions and answers
+                    questions.map( (question, index) => {
+                        answersWithQuestions[index].unshift({"question": question})
+                        answersWithQuestions[index].unshift({"id": nanoid()})
+                    } )
+                    //put the data into the format usable for radio buttons
+                    setData(formatData(answersWithQuestions))
+                    
                 } )
-                // randomly shuffle the answers for each question                
-                answersWithQuestions.forEach( answer => shuffleAnswers(answer) )
-                // add the questions to make a combined array of questions and answers
-                questions.map( (question, index) => {
-                    answersWithQuestions[index].unshift({"question": question})
-                    answersWithQuestions[index].unshift({"id": nanoid()})
-                } )
-                //put the data into the format usable for radio buttons
-                setData(formatData(answersWithQuestions))
-                
-            } )
-            .catch(error => {
-                console.error('Failed to retrieve questions:', error)
-        } ) 
+                .catch(error => {
+                    console.error('Failed to retrieve questions:', error)
+            } ) 
+            }       
+            
         }, [startQuiz] )   
    
 
@@ -62,6 +66,7 @@ export default function App() {
     }   
 
     function formatData(data){
+        console.log("data set")
         let tempArray = [[],[],[],[],[]]
         data.forEach((element, index)=> {
             let correctNumber = ""
