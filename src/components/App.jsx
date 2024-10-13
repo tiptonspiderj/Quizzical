@@ -2,14 +2,12 @@ import React from "react"
 import he from "he"
 import { nanoid } from 'nanoid'
 import StartPage from "./StartPage"
-import Button from "./Button"
 import Quiz from "./Quiz"
 
 export default function App() {
 
     const [startQuiz, setStartQuiz] = React.useState(false)
     const [quizOver, setQuizOver] = React.useState(false)
-    const [resetQuiz, setResetQuiz] = React.useState(false)
     const [data, setData] = React.useState([])
     const [score, setScore] = React.useState(0)
     const [category, setCategory] = React.useState(9)
@@ -49,11 +47,7 @@ export default function App() {
             } ) 
             }       
             
-        }, [startQuiz] )   
-   
-
-    
-   
+        }, [startQuiz] )     
 
     // function from the web that randomly shuffles an array
     function shuffleAnswers(array) {
@@ -64,6 +58,7 @@ export default function App() {
         return array;
     }   
 
+    //this function is used to hide the right and wrong answers from the end user
     function formatData(data){
         let tempArray = [[],[],[],[],[]]
         data.forEach((element, index)=> {
@@ -83,8 +78,17 @@ export default function App() {
         return tempArray
     }
 
+    function checkAnswers() { 
+        setQuizOver(quizOver => !quizOver)    
+    }
+
+    function reset() {
+        setQuizOver(quizOver => !quizOver)
+        setStartQuiz(startQuiz => !startQuiz)
+    }
+
     function loadQuiz(){
-        setStartQuiz(!startQuiz)     
+        setStartQuiz(startQuiz => !startQuiz)     
     }  
 
     return(        
@@ -92,6 +96,15 @@ export default function App() {
             backgroundImage: startQuiz ? `url(/riddler.jpg)` : `url(/riddle.jpg)`,
             backgroundColor: '#F5F7FB'            
           } }>
+
+            { !startQuiz &&  
+                <StartPage  
+                    loadQuiz = { loadQuiz } 
+                    setCategory = {setCategory}
+                    setLevel = {setLevel}
+                /> 
+            }     
+
             { startQuiz ?  data.map( (element) => {
                 return <Quiz 
                     key = {nanoid()}
@@ -108,25 +121,22 @@ export default function App() {
                 /> 
                 }) : ""
             }
+
             <div className="wrapper">
                 { quizOver && <p>Your score is {score}/5.</p>}
                 { startQuiz &&
-                    <Button  
-                        quizOver = { quizOver } 
-                        setQuizOver = { setQuizOver }
-                        resetQuiz = { resetQuiz }
-                        setResetQuiz = { setResetQuiz }
-                        setStartQuiz = {setStartQuiz}
-                    />
+                    (
+                        <div>                   
+                            <div className="button-container">
+                                <button onClick = { quizOver ? reset : checkAnswers } className = "checkAnswers">
+                                    { quizOver ? "Play again" : "Check answers" }
+                                </button>   
+                            </div>              
+                        </div>                       
+                    )
                 }
-            </div>        
-            { !startQuiz &&  
-                <StartPage  
-                    loadQuiz = { loadQuiz } 
-                    setCategory = {setCategory}
-                    setLevel = {setLevel}
-                /> 
-            }                
+            </div>
+            
         </main>
     )
 }

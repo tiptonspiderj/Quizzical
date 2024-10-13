@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function StartPage(props) {
+export default function StartPage({loadQuiz, setCategory, setLevel}) {
     const [categories, setCategories] = React.useState([])
 
     React.useEffect( () => {
@@ -15,17 +15,17 @@ export default function StartPage(props) {
     }, [])   
     
     const handleCategoryChange = (event) => {
-        props.setCategory(event.target.value)
+        setCategory(event.target.value)
     }
 
     const handleLevelChange = (event) => {
-        props.setLevel(event.target.value)
+        setLevel(event.target.value)
     }
 
     return(
         <div className="start-page">
             <h1>Quizzical</h1>
-            <button onClick={props.loadQuiz}>Start Quiz</button>
+            <button onClick={loadQuiz}>Start Quiz</button>
             <div className="select-wrapper">
                 <div className="select">
                     <select id="categoryList" 

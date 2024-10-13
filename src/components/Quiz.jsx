@@ -13,6 +13,8 @@ export  default function Quiz(props){
              
     }, [props.quizOver])
 
+    //this function determines how the answer options will be displayed with different colors
+    //"radio-label" is the classname for every choice before the quiz is over and graded
     function createClassName(answerOption){        
         if ( answerOption === props.rightAnswer && props.quizOver ) {
             return "radio-label right"
