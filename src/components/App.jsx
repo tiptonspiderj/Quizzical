@@ -102,6 +102,7 @@ export default function App() {
                     loadQuiz = { loadQuiz } 
                     setCategory = {setCategory}
                     setLevel = {setLevel}
+                    category = {category}
                 /> 
             }     
 

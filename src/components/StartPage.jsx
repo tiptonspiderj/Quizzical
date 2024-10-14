@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function StartPage({loadQuiz, setCategory, setLevel}) {
+export default function StartPage({loadQuiz, setCategory, setLevel, category}) {
     const [categories, setCategories] = React.useState([])
 
     React.useEffect( () => {
@@ -30,6 +30,7 @@ export default function StartPage({loadQuiz, setCategory, setLevel}) {
                 <div className="select">
                     <select id="categoryList" 
                         className="category" 
+                        value={category}
                         onChange={handleCategoryChange} 
                         size="1"
                     >
