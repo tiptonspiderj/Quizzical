@@ -105,21 +105,12 @@ export default function App() {
                 /> 
             }     
 
-            { startQuiz ?  data.map( (element) => {
-                return <Quiz 
-                    key = {nanoid()}
-                    id =  { element[0].id }
-                    question = { element[1].question } 
-                    one = { element[2].one }
-                    two = { element[3].two }
-                    three = { element[4].three }
-                    four = { element[5].four }
-                    rightAnswer = { element[6].rightAnswer } 
+            { startQuiz &&  
+                <Quiz 
+                    data = { data }
                     quizOver = { quizOver } 
-                    score = { score }
                     setScore = { setScore }
                 /> 
-                }) : ""
             }
 
             <div className="wrapper">
