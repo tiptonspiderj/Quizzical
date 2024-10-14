@@ -2,7 +2,6 @@ import React from "react"
 import { nanoid } from 'nanoid'
 
 export default function Quiz({data, quizOver, setScore}){
-    console.log(data)
     const [rerender, setRerender] = React.useState(false)
     const [selectedOption1, setSelectedOption1] = React.useState("one")
     const [selectedOption2, setSelectedOption2] = React.useState("one")
@@ -46,11 +45,9 @@ export default function Quiz({data, quizOver, setScore}){
             const answers0 = document.getElementsByName(0)
             for (var i = 0; i < answers0.length; i++){
                 if (numbersText[i] === answerOption){
-                    if ( answers0[i].checked && (answerOption === correctAnswers[0])) {
-                        console.log("right here")
+                    if ( answers0[i].checked && (answerOption === correctAnswers[0])) {                       
                         return "radio-label right"
-                    } else if (answers0[i].checked) {
-                        console.log("wrong here")
+                    } else if (answers0[i].checked) {                        
                         return "radio-label wrong"
                     } else {
                         return "radio-label"
