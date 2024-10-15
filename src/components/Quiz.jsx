@@ -57,13 +57,13 @@ export default function Quiz({data, quizOver, setScore}){
     }       
 
     const questionElements = data.map((element, index)=>{
-            let id = element[0].id
-            let question = element[1].question 
-            let one = element[2].one
-            let two = element[3].two
-            let three = element[4].three
-            let four = element[5].four
-            let rightAnswer = element[6].rightAnswer 
+            const id = element[0].id
+            const question = element[1].question 
+            const one = element[2].one
+            const two = element[3].two
+            const three = element[4].three
+            const four = element[5].four
+            const rightAnswer = element[6].rightAnswer 
             correctAnswers.push(rightAnswer)
             let checkedValue = null
             let changeFunction = null
