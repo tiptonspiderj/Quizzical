@@ -15,8 +15,7 @@ export default function Quiz({data, quizOver, setScore}){
             setRerender(!rerender)
             const wrongAnswers = document.getElementsByClassName("radio-label wrong")
             setScore(5 - wrongAnswers.length)
-        } 
-             
+        }              
     }, [quizOver])
 
     const handleChange1 = (event) => {
@@ -45,7 +44,7 @@ export default function Quiz({data, quizOver, setScore}){
             const answers = document.getElementsByName(indexOfQuestion)
             for (var i = 0; i < answers.length; i++){
                 if (numbersText[i] === answerOption){
-                    if ( answers[i].checked && (answerOption === correctAnswers[indexOfQuestion])) {                       
+                    if ( answerOption === correctAnswers[indexOfQuestion] ) {                       
                         return "radio-label right"
                     } else if (answers[i].checked) {                        
                         return "radio-label wrong"
@@ -221,8 +220,7 @@ export default function Quiz({data, quizOver, setScore}){
                             <hr className="line"></hr>
                         </div>
                 )
-            }
-            
+            }            
         })
 
     return(        

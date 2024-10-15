@@ -36,8 +36,8 @@ export default function StartPage({loadQuiz, setCategory, setLevel, category}) {
                     >
                         { categories.map( (element) => {
                             return  <option key={element[0]} value={element[0]}>
-                                        {element[1]}
-                                    </option>
+                                {element[1]}
+                            </option>
                             }) 
                         }                        
                     </select>
