@@ -65,38 +65,24 @@ export default function Quiz({data, quizOver, setScore}){
             let four = element[5].four
             let rightAnswer = element[6].rightAnswer 
             correctAnswers.push(rightAnswer)
+            let checkedValue = null
+            let changeFunction = null
             if (index === 0){
-                return(
-                    <div key={nanoid()}>
-                        <div className="question">
-                            {question}
-                        </div>
-                        <div className="answers">
-                                    
-                            <input type="radio" id={one} name={index} value="one" checked={selectedOption1.valueOf() == "one".valueOf()}
-                                onChange={handleChange1} />
-                            <label className={createClassName("one", index)} htmlFor={one}> {one}
-                            </label>                
-                
-                            <input type="radio" id={two} name={index} value={"two"} checked={selectedOption1.valueOf() == "two".valueOf()}
-                                onChange={handleChange1} />
-                            <label className={createClassName("two", index)} htmlFor={two}> {two}
-                            </label>
-    
-                            <input type="radio" id={three}  name={index} value={"three"} checked={selectedOption1.valueOf() == "three".valueOf()}
-                                onChange={handleChange1} />
-                            <label className={createClassName("three", index)} htmlFor={three}> {three}
-                            </label>
-    
-                            <input type="radio" id={four} name={index} value={"four"} checked={selectedOption1.valueOf() == "four".valueOf()}
-                                onChange={handleChange1} />
-                            <label className={createClassName("four", index)} htmlFor={four}> {four}
-                            </label>
-                            </div>
-                            <hr className="line"></hr>
-                        </div>
-                )
+                checkedValue = selectedOption1.valueOf()
+                changeFunction = handleChange1
             } else if (index === 1){
+                checkedValue = selectedOption2.valueOf()
+                changeFunction = handleChange2
+            } else if (index === 2){
+                checkedValue = selectedOption3.valueOf()
+                changeFunction = handleChange3
+            } else if (index === 3){
+                checkedValue = selectedOption4.valueOf()
+                changeFunction = handleChange4
+            } else if (index === 4){
+                checkedValue = selectedOption5.valueOf()
+                changeFunction = handleChange5
+            } 
                 return(
                     <div key={nanoid()}>
                         <div className="question">
@@ -104,123 +90,29 @@ export default function Quiz({data, quizOver, setScore}){
                         </div>
                         <div className="answers">
                                     
-                            <input type="radio" id={one} name={index} value="one" checked={selectedOption2.valueOf() == "one".valueOf()}
-                                onChange={handleChange2} />
+                            <input type="radio" id={one} name={index} value="one" checked={checkedValue == "one".valueOf()}
+                                onChange={changeFunction} />
                             <label className={createClassName("one", index)} htmlFor={one}> {one}
                             </label>                
                 
-                            <input type="radio" id={two} name={index} value={"two"} checked={selectedOption2.valueOf() == "two".valueOf()}
-                                onChange={handleChange2} />
+                            <input type="radio" id={two} name={index} value={"two"} checked={checkedValue == "two".valueOf()}
+                                onChange={changeFunction} />
                             <label className={createClassName("two", index)} htmlFor={two}> {two}
                             </label>
     
-                            <input type="radio" id={three}  name={index} value={"three"} checked={selectedOption2.valueOf() == "three".valueOf()}
-                                onChange={handleChange2} />
+                            <input type="radio" id={three}  name={index} value={"three"} checked={checkedValue == "three".valueOf()}
+                                onChange={changeFunction} />
                             <label className={createClassName("three", index)} htmlFor={three}> {three}
                             </label>
     
-                            <input type="radio" id={four} name={index} value={"four"} checked={selectedOption2.valueOf() == "four".valueOf()}
-                                onChange={handleChange2} />
+                            <input type="radio" id={four} name={index} value={"four"} checked={checkedValue == "four".valueOf()}
+                                onChange={changeFunction} />
                             <label className={createClassName("four", index)} htmlFor={four}> {four}
                             </label>
                             </div>
                             <hr className="line"></hr>
                         </div>
-                )
-            }else if (index === 2){
-                return(
-                    <div key={nanoid()}>
-                        <div className="question">
-                            {question}
-                        </div>
-                        <div className="answers">
-                                    
-                            <input type="radio" id={one} name={index} value="one" checked={selectedOption3.valueOf() == "one".valueOf()}
-                                onChange={handleChange3} />
-                            <label className={createClassName("one", index)} htmlFor={one}> {one}
-                            </label>                
-                
-                            <input type="radio" id={two} name={index} value={"two"} checked={selectedOption3.valueOf() == "two".valueOf()}
-                                onChange={handleChange3} />
-                            <label className={createClassName("two", index)} htmlFor={two}> {two}
-                            </label>
-    
-                            <input type="radio" id={three}  name={index} value={"three"} checked={selectedOption3.valueOf() == "three".valueOf()}
-                                onChange={handleChange3} />
-                            <label className={createClassName("three", index)} htmlFor={three}> {three}
-                            </label>
-    
-                            <input type="radio" id={four} name={index} value={"four"} checked={selectedOption3.valueOf() == "four".valueOf()}
-                                onChange={handleChange3} />
-                            <label className={createClassName("four", index)} htmlFor={four}> {four}
-                            </label>
-                            </div>
-                            <hr className="line"></hr>
-                        </div>
-                )
-            }else if (index === 3){
-                return(
-                    <div key={nanoid()}>
-                        <div className="question">
-                            {question}
-                        </div>
-                        <div className="answers">
-                                    
-                            <input type="radio" id={one} name={index} value="one" checked={selectedOption4.valueOf() == "one".valueOf()}
-                                onChange={handleChange4} />
-                            <label className={createClassName("one", index)} htmlFor={one}> {one}
-                            </label>                
-                
-                            <input type="radio" id={two} name={index} value={"two"} checked={selectedOption4.valueOf() == "two".valueOf()}
-                                onChange={handleChange4} />
-                            <label className={createClassName("two", index)} htmlFor={two}> {two}
-                            </label>
-    
-                            <input type="radio" id={three}  name={index} value={"three"} checked={selectedOption4.valueOf() == "three".valueOf()}
-                                onChange={handleChange4} />
-                            <label className={createClassName("three", index)} htmlFor={three}> {three}
-                            </label>
-    
-                            <input type="radio" id={four} name={index} value={"four"} checked={selectedOption4.valueOf() == "four".valueOf()}
-                                onChange={handleChange4} />
-                            <label className={createClassName("four", index)} htmlFor={four}> {four}
-                            </label>
-                            </div>
-                            <hr className="line"></hr>
-                        </div>
-                )
-            }else {
-                return(
-                    <div key={nanoid()}>
-                        <div className="question">
-                            {question}
-                        </div>
-                        <div className="answers">
-                                    
-                            <input type="radio" id={one} name={index} value="one" checked={selectedOption5.valueOf() == "one".valueOf()}
-                                onChange={handleChange5} />
-                            <label className={createClassName("one", index)} htmlFor={one}> {one}
-                            </label>                
-                
-                            <input type="radio" id={two} name={index} value={"two"} checked={selectedOption5.valueOf() == "two".valueOf()}
-                                onChange={handleChange5} />
-                            <label className={createClassName("two", index)} htmlFor={two}> {two}
-                            </label>
-    
-                            <input type="radio" id={three}  name={index} value={"three"} checked={selectedOption5.valueOf() == "three".valueOf()}
-                                onChange={handleChange5} />
-                            <label className={createClassName("three", index)} htmlFor={three}> {three}
-                            </label>
-    
-                            <input type="radio" id={four} name={index} value={"four"} checked={selectedOption5.valueOf() == "four".valueOf()}
-                                onChange={handleChange5} />
-                            <label className={createClassName("four", index)} htmlFor={four}> {four}
-                            </label>
-                            </div>
-                            <hr className="line"></hr>
-                        </div>
-                )
-            }            
+                )            
         })
 
     return(        
