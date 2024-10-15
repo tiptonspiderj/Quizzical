@@ -69,7 +69,7 @@ export default function App() {
             if (element[5].right) correctNumber = "four"
             tempArray[index].push({id: element[0].id}) 
             tempArray[index].push ({question: element[1].question} )  
-            tempArray[index].push({ one:  ( element[2].right || element[2].wrong ) } )  
+            tempArray[index].push({one:   ( element[2].right || element[2].wrong )})  
             tempArray[index].push({two:   ( element[3].right || element[3].wrong )})    
             tempArray[index].push({three: ( element[4].right || element[4].wrong )})    
             tempArray[index].push({four:  ( element[5].right || element[5].wrong )})  
