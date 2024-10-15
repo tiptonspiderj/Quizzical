@@ -33,7 +33,7 @@ export default function StartPage({loadQuiz, setCategory, setLevel, category}) {
                         value={category}
                         onChange={handleCategoryChange} 
                         size="1"
-                        name="list of categories"
+                        aria-label="list of categories"
                     >
                         { categories.map( (element) => {
                             return  <option key={element[0]} value={element[0]}>
@@ -49,7 +49,7 @@ export default function StartPage({loadQuiz, setCategory, setLevel, category}) {
                         className="level"
                         onChange={handleLevelChange}
                         size = "1"
-                        name="game level options"
+                        aria-label="game level options"
                     >
                         <option value="easy">Easy</option>
                         <option value="medium">Medium</option>
