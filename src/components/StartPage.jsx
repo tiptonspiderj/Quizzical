@@ -25,7 +25,7 @@ export default function StartPage({loadQuiz, setCategory, setLevel, category}) {
     return(
         <div className="start-page">
             <h1>Quizzical</h1>
-            <button onClick={loadQuiz}>Start Quiz</button>
+            <button type="button" onClick={loadQuiz}>Start Quiz</button>
             <div className="select-wrapper">
                 <div className="select">
                     <select id="categoryList" 
