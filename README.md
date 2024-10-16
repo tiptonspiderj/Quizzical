@@ -8,7 +8,7 @@ This project was made using Visual Code for IDE along with React and Vite for co
 
 ## Getting Started
 
-![start screen]([https://github.com/tiptonspiderj/Passman/blob/main/src/images/Logo.JPG](https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme.png))
+![start screen](https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme.png)
 
 ### Dependencies
 
