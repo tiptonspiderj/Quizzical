@@ -8,7 +8,7 @@ This project was made using Visual Code for IDE along with React and Vite for co
 
 ## Getting Started
 
-<img src="https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme.png" width="300"/> ![quiz_screen](https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme1.png)
+<img src="https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme.png" width="400"/> <img src="https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme1.png" width="400"/>
 
 ### Dependencies
 
