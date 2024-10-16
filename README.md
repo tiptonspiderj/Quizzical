@@ -3,13 +3,12 @@ This is a password manager for your personal use.
 
 ## Description
 
-This project was made using the Eclipse IDE along with the e(fx)clipse plugin. I also used Scenebuilder to create the *.fxml files in the project.
-The application uses AES encryption to secure your information.  I left the choice upto the user when to encryp/decrypt info and where to load and
-save the information on your computer.  There are still a few logic things I need to fix to prevent user error.  Those will be finished shortly.
+This project was made using Visual Code for IDE along with React and Vite for compiling. This project also reaches out to the Open Trivia Database API for the questions displayed in the application.
+
 
 ## Getting Started
 
-![splash screen](https://github.com/tiptonspiderj/Passman/blob/main/src/images/Logo.JPG)
+![start screen]([https://github.com/tiptonspiderj/Passman/blob/main/src/images/Logo.JPG](https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme.png))
 
 ### Dependencies
 
