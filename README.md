@@ -14,7 +14,7 @@ You can select the trivia category from list of categories available from the Tr
 
 ### Installing for Windows
 
-You can make a pull request from this repository and save it onto your local computer.  From there, open up the folder location with Visual Studio Code and run it with the live server extension.  However, you will have to make sure you have NPM installed onto your local machine first and run the following commands in your terminal within Visual Studio Code: 
+You can clone this repository and save it onto your local computer.  Then extract the files from the zip file.  From there, open up the folder location with Visual Studio Code and run it with the live server extension.  However, you will have to make sure you have NPM installed onto your local machine first and run the following commands in your terminal within Visual Studio Code: 
 ```
 npm install
 npm run dev
