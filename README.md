@@ -8,7 +8,7 @@ You can select the trivia category from list of categories available from the Tr
 
 ## Getting Started
 
-![application images](https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme.png)
+[![application images](https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme.png)](https://tiptonspiderj1-quiz-game.netlify.app/)
 
 ### Installing for Windows
 
