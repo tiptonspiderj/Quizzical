@@ -7,6 +7,8 @@ This project was made using Visual Code for the IDE along with React and Vite fo
 You can select the trivia category from list of categories available from the Trivia Database API.  You can also choose the level of difficulty for the questions.  Only five questions are displayed at a time.  The application will tell you how you did on the quiz when you select the "Check answers" button.
 
 ## Getting Started
+ 
+ Click on the image below to see the live website.
 
 [![application images](https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme.png)](https://tiptonspiderj1-quiz-game.netlify.app/)
 
