@@ -16,7 +16,7 @@ You can select the trivia category from list of categories available from the Tr
 | ----------------- | ------------------------------------------------------------------ |
 | Background Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
 | Background Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
-| Text Color | ![#8b8b8b](https://via.placeholder.com/10/8b8b8b) #8b8b8b |
+| Text Color | ![#8b8b8b](https://via.placeholder.com/10/8b8b8b=+) #8b8b8b |
 | Example Color | ![#727272](https://via.placeholder.com/10/727272?text=+) #727272 |
 
 ### Dependencies
