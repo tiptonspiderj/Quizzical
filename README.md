@@ -27,7 +27,7 @@ If you don't know whether or not NPM is installed on your computer, type "npm -v
 
 ### Dependencies
 
-The dependencies are React and the Vite compiler.  I also used Visual Studio Code to make the project from scratch.  Because of the API calls and React used in the project, it must be ran in a server environment.  Visual Studio Code makes this really easy if you enable the "Live Server" extension.  If you have quesitons about that, you can find sources on how to enable the extension on YouTube.  Third part libraries used in the project are "nanoid" for creating keys when mapping over arrays and "he" for decoding characters that show up in the information returned from the trivia database.
+The dependencies are React and the Vite compiler.  I also used Visual Studio Code to make the project from scratch.  Because of the API calls and React used in the project, it must be ran in a server environment.  Visual Studio Code makes this really easy if you enable the "Live Server" extension.  If you have quesitons about that, you can find sources on how to enable the extension on YouTube.  Third party libraries used in the project are "nanoid" for creating keys when mapping over arrays and "he" for decoding characters that show up in the information returned from the trivia database.
 
 ## Color Reference
 
