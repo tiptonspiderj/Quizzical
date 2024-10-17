@@ -18,7 +18,7 @@ You can select the trivia category from list of categories available from the Tr
 | Green Color | ![#0def17](https://via.placeholder.com/10/0def17?text=+) #0def17 |
 | Text Color | ![#8b8b8b](https://via.placeholder.com/10/8b8b8b=+) #8b8b8b |
 | Button Color | ![#0def18](https://via.placeholder.com/10/0def18?text=+) #0def18 |
-| Button Color | ![#d50404](https://via.placeholder.com/10/d50404?text=+) #0d50404 |
+| Button Color | ![#d50404](https://via.placeholder.com/10/d50404?text=+) #d50404 |
 
 ### Dependencies
 
