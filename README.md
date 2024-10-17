@@ -12,22 +12,11 @@ You can select the trivia category from list of categories available from the Tr
 
 ### Dependencies
 
-The dependencies are React and the Vite compiler.  I also used Visual Code to make the project from scratch.
+The dependencies are React and the Vite compiler.  I also used Visual Studio Code to make the project from scratch.  Because of the API calls and React used in the project, it must be ran in a server environment.  Visual Studio Code makes this really easy if you enable the "Live Server" extension.  If you have quesitons about that, you can find sources on how to enable the extension on YouTube.
 
 ### Installing for Windows
 
-You can make an executable installer from my project using java's jpackage tool and the following commands:
-
- jlink --module-path "Your path to JavaFX-Mods-jars" --add-modules=ALL-MODULE-PATH --output runtime
- 
-jpackage -t exe --name Passman --description "Password manager Author: Jeremy Tipton" --app-version 1.0.0 --input input 
---dest output --main-jar Passman.jar --win-shortcut --runtime-image runtime --icon src\images\Passman1.ico
-
-### Executing program
-
-If you just want to run the program from the executable jar in the "input" folder you can use the command:
-
-java -jar --module-path "YOUR PATH TO\javafxsdk17.0.0.1\lib" --add-modules=ALL-MODULE-PATH Passman.jar
+You can make a pull request from this repository and save it onto your local computer.  From there, open up the folder location with Visual Studio Code and run it with the live server extension.  However, you will have to make sure you have NPM installed onto your local machine first and run the following commands in your terminal within Visual Studio Code "npm install" followed by "npm run dev"  or combine the terminal commands like "npm install && npm run dev".  If you don't know whether or not NPM is installed on your computer, type "npm -v" into your command terminal first.  It should return a number if it is installed.  You also have to ensure you are in the right folder directory of this project if you receive an error in the terminal within Visual Studio Code.
 
 ## Authors
 
