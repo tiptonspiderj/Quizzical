@@ -10,6 +10,15 @@ You can select the trivia category from list of categories available from the Tr
 
 ![application images](https://github.com/tiptonspiderj/Quizzical/blob/main/public/readme.png)
 
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Background Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
+| Background Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
+| Text Color | ![#8B8B8B](https://via.placeholder.com/10/8B8B8B) #8B8B8B |
+| Example Color | ![#727272](https://via.placeholder.com/10/727272?text=+) #727272 |
+
 ### Dependencies
 
 The dependencies are React and the Vite compiler.  I also used Visual Studio Code to make the project from scratch.  Because of the API calls and React used in the project, it must be ran in a server environment.  Visual Studio Code makes this really easy if you enable the "Live Server" extension.  If you have quesitons about that, you can find sources on how to enable the extension on YouTube.
