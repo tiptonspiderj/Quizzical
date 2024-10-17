@@ -14,7 +14,16 @@ You can select the trivia category from list of categories available from the Tr
 
 ### Installing for Windows
 
-You can make a pull request from this repository and save it onto your local computer.  From there, open up the folder location with Visual Studio Code and run it with the live server extension.  However, you will have to make sure you have NPM installed onto your local machine first and run the following commands in your terminal within Visual Studio Code: "npm install" followed by "npm run dev"  or combine the terminal commands like "npm install && npm run dev".  If you don't know whether or not NPM is installed on your computer, type "npm -v" into your command terminal first.  It should return a number if it is installed.  You also have to ensure you are in the right folder directory of this project if you receive an error in the terminal within Visual Studio Code.
+You can make a pull request from this repository and save it onto your local computer.  From there, open up the folder location with Visual Studio Code and run it with the live server extension.  However, you will have to make sure you have NPM installed onto your local machine first and run the following commands in your terminal within Visual Studio Code: 
+```
+npm install
+npm run dev
+```
+or combine the terminal commands like:
+```
+npm install && npm run dev
+```
+If you don't know whether or not NPM is installed on your computer, type "npm -v" into your command terminal first.  It should return a number if it is installed.  You also have to ensure you are in the right folder directory of this project if you receive an error in the terminal within Visual Studio Code.
 
 ### Dependencies
 
