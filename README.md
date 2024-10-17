@@ -1,10 +1,10 @@
-# Passman
-This is a password manager for your personal use.
+# Quizzical
+This is general trivia game to be played with yourself or friends.
 
 ## Description
 
 This project was made using Visual Code for IDE along with React and Vite for compiling. This project also reaches out to the Open Trivia Database API for the questions displayed in the application.
-
+You can select the trivia category from list of categories available from the Trivia Database API.  You can also choose the level of difficulty for the questions.  Only five questions are displayed at a time.  
 
 ## Getting Started
 
@@ -12,9 +12,7 @@ This project was made using Visual Code for IDE along with React and Vite for co
 
 ### Dependencies
 
-The dependencies are JavaFX v17 and the external jars included in the "lib" folder
-
-The runnable jar file is located in the "input" folder
+The dependencies are React and the Vite compiler.  I also used Visual Code to make the project from scratch.
 
 ### Installing for Windows
 
