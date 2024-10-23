@@ -41,7 +41,7 @@ The dependencies are React and the Vite compiler.  I also used Visual Studio Cod
 
 ## Authors
 
-Contributors names and contact info
+Contributor's names and contact info
 
 Jeremy Tipton  
 [@tiptonspiderj1](https://tiptonspiderj1.com)
