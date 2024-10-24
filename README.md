@@ -1,10 +1,14 @@
 # Quizzical
-This is a general trivia game to be played with yourself or friends.
+This is a general trivia game to be played with yourself or friends.  A trivia game is a fun, engaging competition where players answer questions on various topics. 
+From history and pop culture to science and sports, it tests your knowledge and quick thinking. Players can compete individually or in teams, racing against the 
+clock or each other to see who can score the most points. Trivia games are perfect for parties, family gatherings, or just a casual hangout with friends. They're 
+not just about winning; they spark conversation, laughter, and a bit of friendly rivalry. Ready to flex your brain muscles?
 
 ## Description
 
 This project was made using Visual Code for the IDE along with React and Vite for compiling the code. This application reaches out to the Open Trivia Database API for the questions displayed in the application.
-You can select the trivia category from list of categories available from the Trivia Database API.  You can also choose the level of difficulty for the questions.  Only five questions are displayed at a time.  The application will tell you how you did on the quiz when you select the "Check answers" button.
+You can select the trivia category from list of categories available from the Trivia Database API.  You can also choose the level of difficulty for the questions.  Only five questions are displayed at a time.  
+The application will tell you how you did on the quiz when you select the "Check answers" button.  
 
 ## Getting Started
  
