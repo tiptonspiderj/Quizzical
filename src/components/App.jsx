@@ -21,9 +21,9 @@ export default function App() {
             if (startQuiz){
                 fetch(URL)
                 .then(res=>res.json() )
-                .then(apidata => {               
+                .then(apidata => {
                     //extract the questions and answers from the API request         
-                    apidata.results.map( (question, index) => {
+                    apidata.results.forEach( (question, index) => {
                         // "he" is used to decode html entities to their symbols rather than weird characters
                         questions[index].push(he.decode(question.question))                  
                         question.incorrect_answers.forEach( (element) => 
@@ -34,13 +34,12 @@ export default function App() {
                     // randomly shuffle the answers for each question                
                     answersWithQuestions.forEach( answer => shuffleAnswers(answer) )
                     // add the questions to make a combined array of questions and answers
-                    questions.map( (question, index) => {
+                    questions.forEach( (question, index) => {
                         answersWithQuestions[index].unshift({"question": question})
                         answersWithQuestions[index].unshift({"id": nanoid()})
                     } )
                     //put the data into the format usable for radio buttons
-                    setData(formatData(answersWithQuestions))
-                    
+                    setData(formatData(answersWithQuestions))                    
                 } )
                 .catch(error => {
                     console.error('Failed to retrieve questions:', error)
