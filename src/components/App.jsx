@@ -22,15 +22,18 @@ export default function App() {
                 fetch(URL)
                 .then(res=>res.json() )
                 .then(apidata => {
+                    
                     //extract the questions and answers from the API request         
                     apidata.results.forEach( (question, index) => {
                         // "he" is used to decode html entities to their symbols rather than weird characters
                         questions[index].push(he.decode(question.question))                  
+                        
                         question.incorrect_answers.forEach( (element) => 
-                            answersWithQuestions[index].push( {"wrong": he.decode(element) } ) 
-                        )
+                            answersWithQuestions[index].push( {"wrong": he.decode(element) } ) )
+
                         answersWithQuestions[index].push( { "right": he.decode(question.correct_answer) } )                
                     } )
+
                     // randomly shuffle the answers for each question                
                     answersWithQuestions.forEach( answer => shuffleAnswers(answer) )
                     // add the questions to make a combined array of questions and answers
@@ -38,8 +41,10 @@ export default function App() {
                         answersWithQuestions[index].unshift({"question": question})
                         answersWithQuestions[index].unshift({"id": nanoid()})
                     } )
+                    
                     //put the data into the format usable for radio buttons
-                    setData(formatData(answersWithQuestions))                    
+                    setData(formatData(answersWithQuestions))  
+
                 } )
                 .catch(error => {
                     console.error('Failed to retrieve questions:', error)
@@ -62,17 +67,18 @@ export default function App() {
         let tempArray = [[],[],[],[],[]]
         data.forEach((element, index)=> {
             let correctNumber = ""
-            if (element[2].right) correctNumber = "one"
-            if (element[3].right) correctNumber = "two"
-            if (element[4].right) correctNumber = "three"
-            if (element[5].right) correctNumber = "four"
-            tempArray[index].push({id: element[0].id}) 
-            tempArray[index].push ({question: element[1].question} )  
-            tempArray[index].push({one:   ( element[2].right || element[2].wrong )})  
-            tempArray[index].push({two:   ( element[3].right || element[3].wrong )})    
-            tempArray[index].push({three: ( element[4].right || element[4].wrong )})    
-            tempArray[index].push({four:  ( element[5].right || element[5].wrong )})  
-            tempArray[index].push({rightAnswer: correctNumber})         
+            element[2].right && (correctNumber = "one")
+            element[3].right && (correctNumber = "two")
+            element[4].right && (correctNumber = "three")
+            element[5].right && (correctNumber = "four")
+            tempArray[index].push({ id: element[0].id}, 
+                {question: element[1].question},
+                {one:   ( element[2].right || element[2].wrong )},
+                {two:   ( element[3].right || element[3].wrong )},
+                {three: ( element[4].right || element[4].wrong )},
+                {four:  ( element[5].right || element[5].wrong )},
+                {rightAnswer: correctNumber}
+            )     
         })
         return tempArray
     }
