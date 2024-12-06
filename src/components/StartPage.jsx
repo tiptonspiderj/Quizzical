@@ -1,9 +1,9 @@
-import React from "react"
+import { useState, useEffect } from "react"
 
 export default function StartPage({loadQuiz, setCategory, setLevel, category}) {
-    const [categories, setCategories] = React.useState([])
+    const [categories, setCategories] = useState([])
 
-    React.useEffect( () => {
+    useEffect( () => {
         fetch("https://opentdb.com/api_category.php")
         .then(res=> res.json())
         .then(categoryList => {

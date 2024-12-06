@@ -7,11 +7,11 @@ import Quiz from "./Quiz"
 export default function App() {
 
     const [startQuiz, setStartQuiz] = useState(false)
-    const [quizOver, setQuizOver] = useState(false)
-    const [data, setData] = useState([])
-    const [score, setScore] = useState(0)
-    const [category, setCategory] = useState(9)
-    const [level, setLevel] = useState("easy")
+    const [quizOver, setQuizOver]   = useState(false)
+    const [data, setData]           = useState([])
+    const [score, setScore]         = useState(0)
+    const [category, setCategory]   = useState(9)
+    const [level, setLevel]         = useState("easy")
 
     let questions = [[], [], [], [], []] 
     let answersWithQuestions = [[], [], [], [], []] 

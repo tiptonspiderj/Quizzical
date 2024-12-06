@@ -1,16 +1,16 @@
-import React from "react"
+import { useState, useEffect } from "react"
 import { nanoid } from 'nanoid'
 
 export default function Quiz({data, quizOver, setScore}){
-    const [rerender, setRerender] = React.useState(false)
-    const [selectedOption1, setSelectedOption1] = React.useState("one")
-    const [selectedOption2, setSelectedOption2] = React.useState("one")
-    const [selectedOption3, setSelectedOption3] = React.useState("one")
-    const [selectedOption4, setSelectedOption4] = React.useState("one")
-    const [selectedOption5, setSelectedOption5] = React.useState("one")
+    const [rerender, setRerender]               = useState(false)
+    const [selectedOption1, setSelectedOption1] = useState("one")
+    const [selectedOption2, setSelectedOption2] = useState("one")
+    const [selectedOption3, setSelectedOption3] = useState("one")
+    const [selectedOption4, setSelectedOption4] = useState("one")
+    const [selectedOption5, setSelectedOption5] = useState("one")
    let correctAnswers = []
     
-    React.useEffect(()=> {
+    useEffect(()=> {
         if (quizOver){            
             setRerender(!rerender)
             const wrongAnswers = document.getElementsByClassName("radio-label wrong")
