@@ -1,4 +1,4 @@
-import React from "react"
+import { useState, useEffect } from "react"
 import he from "he"
 import { nanoid } from 'nanoid'
 import StartPage from "./StartPage"
@@ -6,18 +6,18 @@ import Quiz from "./Quiz"
 
 export default function App() {
 
-    const [startQuiz, setStartQuiz] = React.useState(false)
-    const [quizOver, setQuizOver] = React.useState(false)
-    const [data, setData] = React.useState([])
-    const [score, setScore] = React.useState(0)
-    const [category, setCategory] = React.useState(9)
-    const [level, setLevel] = React.useState("easy")
+    const [startQuiz, setStartQuiz] = useState(false)
+    const [quizOver, setQuizOver] = useState(false)
+    const [data, setData] = useState([])
+    const [score, setScore] = useState(0)
+    const [category, setCategory] = useState(9)
+    const [level, setLevel] = useState("easy")
 
     let questions = [[], [], [], [], []] 
     let answersWithQuestions = [[], [], [], [], []] 
     const URL = `https://opentdb.com/api.php?amount=5&category=${category}&difficulty=${level}&type=multiple` 
 
-        React.useEffect(()=>{ 
+        useEffect(()=>{ 
             if (startQuiz){
                 fetch(URL)
                 .then(res=>res.json() )
